@@ -38,7 +38,7 @@ export default class EmployeeList extends Component {
     render() {
         return (
             <Container>
-            <div className="border">
+            <div>
                 
                 <table className="table table-dark">
                    <thead>
@@ -47,7 +47,7 @@ export default class EmployeeList extends Component {
                         <th itemScope="col">First Name</th>
                         <th itemScope="col">Last Name</th>
                         <th itemScope="col">Email</th>
-                        <th itemScope="col">Actions</th>
+                        <th itemScope="col" colSpan="3">Actions</th>
                     </tr>
                     </thead>
                 {
@@ -58,15 +58,9 @@ export default class EmployeeList extends Component {
                             <td>{e.firstname}</td>
                             <td>{e.lastname}</td>
                             <td>{e.emailId}</td>
-                            <td>
-                                <Link to={`/add/${e.id}`}>
-                                    <button className="update_btn">Update</button>
-                                </Link>
-                                <button className="delete_btn" onClick={() => this.deleteEmployee(e.id)}>Delete</button>
-                                <Link to={`/view/${e.id}`}>
-                                    <button className="view_btn">View</button>
-                                </Link>
-                            </td>
+                            <td><Link to={`/add/${e.id}`}><button>Update</button></Link></td>
+                            <td><button className="delete_btn" onClick={() => this.deleteEmployee(e.id)}>Delete</button></td>
+                            <td><Link to={`/view/${e.id}`}><button className="view_btn">View</button></Link></td>
                         </tr>
                         </tbody>
                     ))

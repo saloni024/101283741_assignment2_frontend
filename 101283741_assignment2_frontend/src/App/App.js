@@ -5,9 +5,9 @@ import  NavBar  from '../components/Navbar'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
   
-  import EmployeeList from '../components/EmployeeList';
-  import EmployeeDetail from '../components/EmployeeDetail';
-  import EmployeeAdd from '../components/EmployeeAdd';
+import EmployeeList from '../components/EmployeeList';
+import EmployeeDetail from '../components/EmployeeDetail';
+import EmployeeAdd from '../components/EmployeeAdd';
 
   function App() {
     return (
